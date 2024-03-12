@@ -8,11 +8,13 @@ import Login from './Login';
 import { Product } from './Product';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Registatation from './Registatation';
+import BasicForm from './BasicForm';
+import SingUpForm from './SingUpForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Registatation />
+    <SingUpForm />
   </React.StrictMode>
 );
 
