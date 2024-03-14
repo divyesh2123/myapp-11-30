@@ -11,6 +11,8 @@ export default function EmpWithYup() {
         password: '',
         confirmPassword: '',
         acceptTerms: false,
+        gender: '',
+        country: ''
       };
 
      const handleSubmit= (data)=> {
@@ -38,6 +40,12 @@ export default function EmpWithYup() {
             .required('Confirm Password is required')
             .oneOf([Yup.ref('password'), null], 'Confirm Password does not match'),
           acceptTerms: Yup.bool().oneOf([true], 'Accept Terms is required'),
+          gender : Yup.string()
+                .required("Please Select the Gender"),
+
+        country: Yup.string()
+                .required("Please Select Country")         
+       
         });
       }
 
@@ -124,6 +132,37 @@ export default function EmpWithYup() {
               className="text-danger"
             />
           </div>
+
+          <div role="group" aria-labelledby="my-radio-group">
+            <label>
+              <Field type="radio" name="gender" value="Male" />
+              Male
+            </label>
+            <label>
+              <Field type="radio" name="gender" value="Female" />
+              Female
+            </label>
+
+            <ErrorMessage
+              name="gender"
+              component="div"
+              className="text-danger"
+            />
+            
+          </div>
+
+          <Field name="country" as="select">
+          <option value="">---Select--Country</option>
+   <option value="in">India</option>
+   <option value="us">USA</option>
+   <option value="ca">Canada</option>
+ </Field>
+ <ErrorMessage
+              name="country"
+              component="div"
+              className="text-danger"
+            />
+
 
           <div className="form-group">
             <button type="submit" 
