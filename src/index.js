@@ -12,11 +12,13 @@ import BasicForm from './BasicForm';
 import SingUpForm from './SingUpForm';
 import Emp from './Emp';
 import EmpWithYup from './EmpWithYup';
+import MyExample from './MyExample';
+import MyForm from './MyForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <EmpWithYup />
+    <MyExample />
   </React.StrictMode>
 );
 
