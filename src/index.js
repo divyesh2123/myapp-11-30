@@ -15,11 +15,13 @@ import EmpWithYup from './EmpWithYup';
 import MyExample from './MyExample';
 import MyForm from './MyForm';
 import FullFormFunction from './FullFormFunction';
+import MyButton from './MyButton';
+import MyDisplay from './MyDisplay';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FullFormFunction />
+    <MyDisplay/>
   </React.StrictMode>
 );
 
