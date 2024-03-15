@@ -14,11 +14,12 @@ import Emp from './Emp';
 import EmpWithYup from './EmpWithYup';
 import MyExample from './MyExample';
 import MyForm from './MyForm';
+import FullFormFunction from './FullFormFunction';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MyExample />
+    <FullFormFunction />
   </React.StrictMode>
 );
 
