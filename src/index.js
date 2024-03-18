@@ -17,11 +17,14 @@ import MyForm from './MyForm';
 import FullFormFunction from './FullFormFunction';
 import MyButton from './MyButton';
 import MyDisplay from './MyDisplay';
+import TokenLogin from './TokenLogin';
+import Accounts from './Accounts';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MyDisplay/>
+    <TokenLogin/>
+    <Accounts/>
   </React.StrictMode>
 );
 
