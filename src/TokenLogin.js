@@ -22,6 +22,9 @@ const handleSubmit = (e)=>{
     .then(y=>{
 
         localStorage.setItem("tokennew",JSON.stringify(y.data));
+    }).catch(y=>{
+
+        console.log("error from API");
     })
 
 }

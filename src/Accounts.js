@@ -8,17 +8,13 @@ export default function Accounts() {
     useEffect(()=>{
 
         let token = JSON.parse(localStorage.getItem("tokennew"));
-        axios.get(" https://real-pear-fly-kilt.cyclic.app/accounts",{
+        axios.get(" https://real-pear-fly-kilt.cyclic.app/accounts"
 
-        headers: {
-            'Content-Type': "application/json",
-            Authorization: `Bearer ${token.jwtToken}` 
-            
-        }
-
-        }).then(y=>{
+        ).then(y=>{
 
             console.log(y.data);
+        }).catch(y=>{
+          console.log(y);
         })
 
 
