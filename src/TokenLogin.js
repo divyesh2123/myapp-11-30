@@ -18,7 +18,7 @@ const handleSubmit = (e)=>{
 
     e.preventDefault();
 
-    axios.post(" https://real-pear-fly-kilt.cyclic.app/accounts/authenticate",data)
+    axios.post("https://real-pear-fly-kilt.cyclic.app/accounts/authenticate",data)
     .then(y=>{
 
         localStorage.setItem("tokennew",JSON.stringify(y.data));

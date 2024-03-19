@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import authFetch from './axiosbase/custom';
 
 export default function Accounts() {
 
@@ -8,7 +9,7 @@ export default function Accounts() {
     useEffect(()=>{
 
         let token = JSON.parse(localStorage.getItem("tokennew"));
-        axios.get(" https://real-pear-fly-kilt.cyclic.app/accounts"
+        authFetch.get("/accounts"
 
         ).then(y=>{
 
