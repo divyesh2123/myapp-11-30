@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import authFetch from './axiosbase/custom';
+import authFetch from './axiosbase/interceptors';
+
 
 export default function Accounts() {
 
