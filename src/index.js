@@ -21,12 +21,12 @@ import TokenLogin from './TokenLogin';
 import Accounts from './Accounts';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Master from './Master';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TokenLogin/>
-    <Accounts/>
-    <ToastContainer />
+    <App/>
+  
   </React.StrictMode>
 );
 
