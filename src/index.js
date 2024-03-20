@@ -22,10 +22,11 @@ import Accounts from './Accounts';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Master from './Master';
+import MyDisplayClass from './MyDisplayClass';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App/>
+    <MyDisplayClass/>
   
   </React.StrictMode>
 );
