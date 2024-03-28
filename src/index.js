@@ -24,11 +24,15 @@ import 'react-toastify/dist/ReactToastify.css';
 import Master from './Master';
 import MyDisplayClass from './MyDisplayClass';
 import MyUsers from './MyUsers';
+import { BrowserRouter } from "react-router-dom";
+import Test from './Test';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MyUsers/>
-  
+      <BrowserRouter>
+    <Test/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -24,7 +24,7 @@ export default function MyUsers() {
 
         <input type='text'  onChange={handleChange}/>
         <button onClick={save}>save</button>
-        <MyUser data ={data}/>
+        <MyUser data ={{data:data}}/>
     </div>
   )
 }

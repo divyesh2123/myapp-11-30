@@ -8,4 +8,14 @@ import React from 'react'
   )
 }
 
-export default React.memo(MyUser);
+export default React.memo(MyUser,(pre,next)=>{
+
+  if(pre.data.data.length == next.data.data.length)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+});
