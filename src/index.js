@@ -26,14 +26,18 @@ import MyDisplayClass from './MyDisplayClass';
 import MyUsers from './MyUsers';
 import { BrowserRouter } from "react-router-dom";
 import Test from './Test';
-
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import MyLogin from './MyLogin';
+import { ShowMoreTextToggle } from './ShowMoreTextToggle';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-      <BrowserRouter>
-    <Test/>
-    </BrowserRouter>
-  </React.StrictMode>
+  <GoogleOAuthProvider clientId="115267782966-4k2hd65uhgcpphknlut328a955otsvr9.apps.googleusercontent.com">
+        <BrowserRouter>
+        <React.StrictMode>
+           <ShowMoreTextToggle text="This is the javascript This is the javascript This is the javascript This is the javascript This is the javascript This is the javascript"/>
+        </React.StrictMode>
+        </BrowserRouter>
+    </GoogleOAuthProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
