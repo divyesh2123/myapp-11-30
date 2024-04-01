@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import MyUser from './MyUser';
 
 export default function MyUsers() {
@@ -12,6 +12,16 @@ export default function MyUsers() {
 
     }
 
+    const deleteItem =  useCallback((index)=>{
+
+      let p= [...data];
+
+      p.splice(index,1);
+
+      setData(p);
+
+    },[data])
+
     const save = ()=>{
         let p = [...data];
         p.push(text);
@@ -24,7 +34,7 @@ export default function MyUsers() {
 
         <input type='text'  onChange={handleChange}/>
         <button onClick={save}>save</button>
-        <MyUser data ={{data:data}}/>
+        <MyUser data ={data} remove={deleteItem} />
     </div>
   )
 }

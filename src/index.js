@@ -34,7 +34,7 @@ root.render(
   <GoogleOAuthProvider clientId="115267782966-4k2hd65uhgcpphknlut328a955otsvr9.apps.googleusercontent.com">
         <BrowserRouter>
         <React.StrictMode>
-           <ShowMoreTextToggle text="This is the javascript This is the javascript This is the javascript This is the javascript This is the javascript This is the javascript"/>
+           <MyUsers />
         </React.StrictMode>
         </BrowserRouter>
     </GoogleOAuthProvider>

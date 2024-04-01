@@ -4,18 +4,19 @@ import React from 'react'
 
     console.log(props);
   return (
-    <div>MyUser</div>
+    <div>
+        {
+           props.data.map((v,index)=>{
+
+           return (<div>{v} <button onClick={()=>{
+              props.remove(index);
+            }}>delete</button></div>)
+
+           })
+        }
+
+    </div>
   )
 }
 
-export default React.memo(MyUser,(pre,next)=>{
-
-  if(pre.data.data.length == next.data.data.length)
-  {
-    return true;
-  }
-  else
-  {
-    return false;
-  }
-});
+export default React.memo(MyUser);
