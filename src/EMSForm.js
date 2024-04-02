@@ -8,6 +8,17 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 export default function EMSForm(props) {
+
+    const [form,setform] = React.useState({
+        firstName : "",
+        lastName : ""
+    })
+
+    const handleInput = (e)=>{
+
+        setform({...form,[e.target.name]: e.target.value})
+
+    }
   return (
     <Dialog
     open={props.open}
@@ -15,8 +26,11 @@ export default function EMSForm(props) {
     PaperProps={{
       component: 'form',
       onSubmit: (event) => {
-        event.preventDefault();
        
+        event.preventDefault();
+        let p = [...props.data];
+        p.push(form);
+        props.setData(p);
         props.handleClose();
       },
     }}
@@ -32,11 +46,25 @@ export default function EMSForm(props) {
         required
         margin="dense"
         id="name"
-        name="email"
-        label="Email Address"
-        type="email"
+        name="firstName"
+        label="firstName"
+        type="text"
         fullWidth
         variant="standard"
+        onChange={handleInput}
+      />
+
+<TextField
+        autoFocus
+        required
+        margin="dense"
+        id="lastName"
+        name="lastName"
+        label="lastName"
+        type="text"
+        fullWidth
+        variant="standard"
+        onChange={handleInput}
       />
     </DialogContent>
     <DialogActions>
