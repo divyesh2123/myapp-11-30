@@ -29,12 +29,13 @@ import Test from './Test';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import MyLogin from './MyLogin';
 import { ShowMoreTextToggle } from './ShowMoreTextToggle';
+import ParentEMS from './ParentEMS';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <GoogleOAuthProvider clientId="115267782966-4k2hd65uhgcpphknlut328a955otsvr9.apps.googleusercontent.com">
         <BrowserRouter>
         <React.StrictMode>
-           <MyUsers />
+           <ParentEMS />
         </React.StrictMode>
         </BrowserRouter>
     </GoogleOAuthProvider>
