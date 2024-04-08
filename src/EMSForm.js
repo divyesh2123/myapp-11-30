@@ -14,6 +14,22 @@ export default function EMSForm(props) {
         lastName : ""
     })
 
+    React.useEffect(()=>{
+
+      alert(props.index);
+      if(props.index >=0)
+      {
+      setform(props.data[props.index])
+
+      }
+      else
+      {
+        setform({firstName:"",lastName:""})
+      }
+
+
+    },[props.index])
+
     const handleInput = (e)=>{
 
         setform({...form,[e.target.name]: e.target.value})
@@ -29,8 +45,18 @@ export default function EMSForm(props) {
        
         event.preventDefault();
         let p = [...props.data];
-        p.push(form);
+
+        if(props.index >=0)
+        {
+          p[props.index]= form
+        }
+        else
+        {
+        p.push({...form,id: p.length+1});
+        }
         props.setData(p);
+        props.setIndex(-1);
+        setform({firstName:"",lastName:""})
         props.handleClose();
       },
     }}
@@ -50,6 +76,7 @@ export default function EMSForm(props) {
         label="firstName"
         type="text"
         fullWidth
+        value={form.firstName}
         variant="standard"
         onChange={handleInput}
       />
@@ -64,6 +91,7 @@ export default function EMSForm(props) {
         type="text"
         fullWidth
         variant="standard"
+        value={form.lastName}
         onChange={handleInput}
       />
     </DialogContent>

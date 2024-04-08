@@ -7,11 +7,29 @@ export default function ParentEMS() {
 
     const [open, setOpen] = React.useState(false);
 
+    const [index,setIndex]= React.useState(-1);
+
     const [data,setData]= useState([]);
 
     const handleClickOpen = () => {
       setOpen(true);
     };
+
+    const deleteRemove = (index)=>{
+
+      let p1 = [...data];
+
+      p1.splice(index-1,1);
+
+      setData(p1);
+
+    }
+
+    const editRecord = (index)=>{
+
+      setIndex(index-1);
+      setOpen(true);
+    }
   
     const handleClose = () => {
       setOpen(false);
@@ -27,9 +45,13 @@ export default function ParentEMS() {
         
         data={data}
         setData={setData}
-        
+        index={index}
+        setIndex={setIndex}
         />
-        <EMSDisplay data={data}/>
+        <EMSDisplay data={data} d={deleteRemove}
+        
+        editRecord={editRecord}
+        />
 
     </div>
   )
