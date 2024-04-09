@@ -30,12 +30,17 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import MyLogin from './MyLogin';
 import { ShowMoreTextToggle } from './ShowMoreTextToggle';
 import ParentEMS from './ParentEMS';
+import BuggyCounter from './BuggyCounter';
+import { ErrorBoundary } from "react-error-boundary";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <GoogleOAuthProvider clientId="115267782966-4k2hd65uhgcpphknlut328a955otsvr9.apps.googleusercontent.com">
         <BrowserRouter>
         <React.StrictMode>
+          <ErrorBoundary fallback={<div>something went wrong</div>}>
            <ParentEMS />
+            <BuggyCounter/>
+           </ErrorBoundary>
         </React.StrictMode>
         </BrowserRouter>
     </GoogleOAuthProvider>
