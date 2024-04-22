@@ -38,20 +38,17 @@ import store from './store/store';
 import CounterRedux from './CounterRedux';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <GoogleOAuthProvider clientId="115267782966-4k2hd65uhgcpphknlut328a955otsvr9.apps.googleusercontent.com">
-        <BrowserRouter>
+
         <React.StrictMode>
-          <ErrorBoundary fallback={<div>something went wrong</div>}>
            
            <Provider store={store}>
            
               <CounterRedux/>
 
             </Provider>
-           </ErrorBoundary>
+          
         </React.StrictMode>
-        </BrowserRouter>
-    </GoogleOAuthProvider>
+       
 );
 
 // If you want to start measuring performance in your app, pass a function
