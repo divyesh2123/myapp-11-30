@@ -4,7 +4,7 @@ import { Decrement, Increment } from './action/counteraction';
 
 export default function CounterRedux() {
 
-   const data= useSelector(y=>y);
+   const data= useSelector(y=>y.CounterRedux);
 
    const dis = useDispatch();
 
