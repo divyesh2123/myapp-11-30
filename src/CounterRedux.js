@@ -10,7 +10,7 @@ export default function CounterRedux() {
 
    const inc = ()=>{
 
-    dis(Increment())
+    dis({"type": "INCREMENT_ASYNC"})
    }
 
    const dec = ()=>{
