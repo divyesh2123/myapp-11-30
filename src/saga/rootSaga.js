@@ -3,5 +3,5 @@ import { watchIncrementAsync } from "./counterSaga";
 
 export default function* rootSaga() {
 
-    yield all([watchIncrementAsync()]);
+    yield all([watchIncrementAsync(),watcherUserSaga()],);
 }
